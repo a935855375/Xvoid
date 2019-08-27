@@ -1,0 +1,36 @@
+<ng-container #messages *ngFor="let message of messages">
+  <div *ngIf="message.uid != uid" class="warp">
+    <div>
+      <nz-avatar
+        [nzText]="message.nickname.slice(0, 3)"
+        nzSize="large"
+        [ngStyle]="{ 'background-color': color }"
+        style="vertical-align: middle;"
+      ></nz-avatar>
+    </div>
+
+    <div class="right">
+      <span class="name">{{message.nickname}}</span>
+      <div class="message-arrow-left"></div>
+      <p class="message" [innerHTML]="message.content"></p>
+    </div>
+  </div>
+
+  <div *ngIf="message.uid == uid" class="warp-reverse">
+    <div>
+      <nz-avatar
+        [nzText]="message.nickname.slice(0, 3)"
+        nzSize="large"
+        [ngStyle]="{ 'background-color': color }"
+        style="vertical-align: middle;"
+      ></nz-avatar>
+    </div>
+
+    <div class="left">
+      <span class="name">{{message.nickname}}</span>
+      <div class="message-arrow-right"></div>
+      <p class="message" [innerHTML]="message.content"></p>
+    </div>
+  </div>
+</ng-container>
+

@@ -1,0 +1,124 @@
+.title {
+  margin-bottom: 2rem;
+  margin-top: 0 !important;
+  text-align: center;
+  font-size: 2.25rem;
+  font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 3rem;
+  color: #1a2138;
+  display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+input {
+  background-color: #f7f9fc;
+  color: #1a2138;
+  font-family: Open Sans, sans-serif;
+  -webkit-appearance: none;
+  transition-duration: .15s;
+  transition-property: border, background-color, color, box-shadow;
+  transition-timing-function: ease-in;
+  border: 1px solid #edf1f7;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #8f9bb3;
+  font-family: Open Sans, sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1rem;
+}
+
+.caption {
+  color: #ff3d71;
+  margin-top: 0.5rem;
+  font-family: Open Sans, sans-serif;
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.accept-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.text {
+  color: #1a2138;
+  font-family: Open Sans, sans-serif;
+  font-size: .8125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  transition: color 0.15s ease-in;
+  padding-left: .6875rem;
+}
+
+a {
+  color: #36f;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit
+}
+
+:host ::ng-deep .ant-input-lg {
+  height: 48px;
+}
+
+:host ::ng-deep .ant-btn {
+  height: 48px;
+  padding: .75rem 1.125rem;
+  border-style: solid;
+  border-width: .125rem;
+  text-transform: uppercase;
+  background-color: #edf1f7;
+  border-color: #edf1f7;
+  color: #c5cee0;
+}
+
+:host ::ng-deep .ant-btn-primary {
+  color: #fff;
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+
+.sub-title {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #1a2138;
+  font-family: Open Sans, sans-serif;
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.disabled-button {
+  cursor: default;
+}
+
+.form-error {
+  box-shadow: 0 0 0 2px rgba(255, 77, 76, 0.2);
+  border-color: #ff3d71;
+}
+
+.another-action {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.text-link {
+  color: #8f9bb3;
+}

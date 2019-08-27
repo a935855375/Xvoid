@@ -19,7 +19,11 @@
     "@angular/platform-browser": "~8.1.2",
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
+    "ng-zorro-antd": "^8.2.0",
+    "ngx-markdown": "^8.1.0",
+    "queueing-subject": "^0.3.4",
     "rxjs": "~6.4.0",
+    "rxjs-websockets": "^7.0.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },
