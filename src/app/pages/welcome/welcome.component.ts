@@ -17,7 +17,7 @@ export class WelcomeComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
 
-  heartBeanSub: Subscription;
+  heartbeatSub: Subscription;
 
   disableScrollDown = false;
 
@@ -76,14 +76,14 @@ export class WelcomeComponent implements OnInit, OnDestroy {
       console.log('Connection is closed!');
     });
 
-    this.heartBeanSub = timer(10000, 10000).subscribe(_ => {
+    this.heartbeatSub = timer(10000, 10000).subscribe(_ => {
       this.WebSocketService.input.next(Message.generateCommonMessage(Message.HEART_BEAT));
     });
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
-    this.heartBeanSub.unsubscribe();
+    this.heartbeatSub.unsubscribe();
   }
 
   onScroll() {
