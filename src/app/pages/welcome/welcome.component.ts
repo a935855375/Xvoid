@@ -3,7 +3,6 @@ import {Message} from '../../entity/message';
 import {WebsocketService} from './websocket-service';
 import {Subscription, timer} from 'rxjs';
 import {NzMessageService, NzNotificationService} from 'ng-zorro-antd';
-import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-welcome',
@@ -70,7 +69,7 @@ export class WelcomeComponent implements OnInit, OnDestroy {
           }
           break;
       }
-    }, err => {
+    }, () => {
       console.log('Something go wrong..');
     }, () => {
       console.log('Connection is closed!');
