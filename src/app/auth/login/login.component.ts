@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   passwordError = '';
 
-  isLoginEnabled = false;
+  isLoginEnabled = this.password && this.email && (this.passwordError == '' && this.emailError == '');
 
   isSpinning = false;
 
@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     this.isSpinning = true;
     this.authService.login(this.email, this.password).then(_ => {
       this.isSpinning = false;
-      this.router.navigate(['/pages'])
+      this.router.navigate(['/pages']);
     }).catch(err => {
       this.isSpinning = false;
       if (err.error && err.error.msg) {

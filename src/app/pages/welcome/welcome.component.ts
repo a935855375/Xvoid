@@ -28,7 +28,7 @@ export class WelcomeComponent implements OnInit, OnDestroy {
 
   @ViewChild('scrollMe', {static: true}) private myScrollContainer: ElementRef;
 
-  constructor(private WebSocketService: WebsocketService,
+  constructor(private webSocketService: WebsocketService,
               private notification: NzNotificationService,
               private message: NzMessageService) {
     this.uid = Number(localStorage.getItem('uid'));
@@ -38,16 +38,17 @@ export class WelcomeComponent implements OnInit, OnDestroy {
     if (this.msg != '') {
       this.down = true;
       const message = Message.generateCommonMessage(Message.USER_INPUT_MESSAGE, this.msg);
-      this.WebSocketService.input.next(message);
+      this.webSocketService.input.next(message);
       this.msg = '';
     }
   }
 
   ngOnInit() {
     const message = Message.generateCommonMessage(Message.USER_ENTER_MESSAGE);
-    this.WebSocketService.input.next(message);
 
-    this.subscription = this.WebSocketService.messages.subscribe((msg: Message) => {
+    this.webSocketService.input.next(message);
+
+    this.subscription = this.webSocketService.messages.subscribe((msg: Message) => {
 
       switch (msg.type) {
         case Message.USER_INPUT_MESSAGE:
@@ -76,7 +77,7 @@ export class WelcomeComponent implements OnInit, OnDestroy {
     });
 
     this.heartbeatSub = timer(10000, 10000).subscribe(_ => {
-      this.WebSocketService.input.next(Message.generateCommonMessage(Message.HEART_BEAT));
+      this.webSocketService.input.next(Message.generateCommonMessage(Message.HEART_BEAT));
     });
   }
 
