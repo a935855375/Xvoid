@@ -21,6 +21,10 @@ export class Message {
 
   static USER_LEAVE_MESSAGE = 4;
 
+  static HISTORY_MESSAGES = 5;
+
+  static PULL_MESSAGES = 6;
+
   static generateCommonMessage(type: number, content ?: string, time?: number, fromUser ?: number): Message {
     const message = new Message();
     message.type = type;
